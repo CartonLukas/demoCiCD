@@ -8,7 +8,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: |
-      docker build -t lukas2207/beimage:latest ./backend
+        docker build -t lukas2207/beimage:latest ./backend
       run: |
-      docker build -t lukas2207/frimage:latest ./frontend
+        docker build -t lukas2207/frimage:latest ./frontend
     
