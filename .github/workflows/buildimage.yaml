@@ -1,4 +1,4 @@
-name: Build Docker images fro project
+name: Build Docker images from project
 on: [workflow_dispatch]
 jobs:
   build:
@@ -10,4 +10,9 @@ jobs:
       run: |
         docker build -t lukas2207/beimage:latest ./backend
         docker build -t lukas2207/frimage:latest ./frontend
+    - name: push images to dockerhub
+      run: |
+        docker login -u lukas2207 -p ${{ secrets.DOCKERHUBTOKEN }}
+        docker push lukas2207/beimage:latest
+        docker push lukas2207/frimage:latest
     
