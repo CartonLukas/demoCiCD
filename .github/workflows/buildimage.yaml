@@ -1,5 +1,11 @@
 name: Build Docker images from project
-on: [workflow_dispatch]
+on: #[workflow_dispatch]
+  push:
+    branches:
+      - main
+    paths: 
+      - 'backend'
+      - 'frontend'
 jobs:
   build:
     runs-on: ubuntu-latest
