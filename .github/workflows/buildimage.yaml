@@ -7,6 +7,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-    - run: |
+    run: 
       docker build -t lukas2207/testimage:latest ./backend
     
